@@ -104,9 +104,14 @@
                         </div>
 
                          <div class="form-group">
-                            <label for="group_id" class="col-sm-2 control-label no-padding-right">缩略图</label>
+                            <label for="group_id" class="col-sm-2 control-label no-padding-right">缩略图</label> 
                             <div class="col-sm-6">
                                 <input id="pic" placeholder="" name="pic"  type="file">
+                                {if condition="$Cate['pic'] neq '' "}
+                                <img src="__IMG__{$Cate.pic}" width="50">
+                                {else /}
+                                <span>暂无图片</span>
+                                {/if}
                             </div>
                         </div>
 
@@ -114,7 +119,7 @@
                             <label for="group_id" class="col-sm-2 control-label no-padding-right">是否推荐</label>
                             <div class="col-sm-6">
                                  <label>
-                                    <input class="checkbox-slider colored-darkorange" name="state" type="checkbox">
+                                    <input class="checkbox-slider colored-darkorange" {if condition = "$Cate['state'] eq 1"}checked="checked"{/if} name="state" type="checkbox">
                                     <span class="text"></span>
                                  </label>
                             </div>
@@ -124,7 +129,7 @@
                             <label for="group_id" class="col-sm-2 control-label no-padding-right">文章内容</label>
                             <div class="col-sm-6">
                                  <label>
-                                    <textarea name="content"  id="content"></textarea>
+                                    <textarea name="content"  id="content">{$Cate.content}</textarea>
                                  </label>
                             </div>
                         </div>

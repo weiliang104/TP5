@@ -28,9 +28,7 @@ if(db('links')->insert($data)){
 
 
 public function del(){
-	// if(db('links')->delete(input('link'))){
-	// 	$this->seccess('删除成功');
-	// }
+
 	if(!empty(input('id'))){
 		$res=db('links')->delete(input('id'));
 		$this->seccess('删除成功');

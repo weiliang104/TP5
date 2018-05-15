@@ -70,7 +70,7 @@ __PUBLIC__<!DOCTYPE html>
                            {volist name="list" id="vo"}
                                                         <tr>
                                 <td align="center">{$vo.title}</td>
-                                <td align="center">{$vo.title}</td>
+                                <td align="center">{$vo.desc}</td>
                                 <td align="center">{$vo.title}</td>
                                 <td align="center">{$vo.title}</td>
                                 <td align="center">
@@ -80,15 +80,14 @@ __PUBLIC__<!DOCTYPE html>
                                 暂无图片1
                                 {/if}
                                 </td>
-                                <td align="center">{$vo.title}</td>
+                                <td align="center">{$vo.column.column}</td>
 
                                 
                                 <td align="center">
                                     <a href="{:url('Cate/edit',array('id'=>$vo['id']))}" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
                                     </a>
-                                    <a href="#" onClick="warning('确实要删除吗','{:url('Links/del',array('id'=>$vo['id']))}')" 
-                                               
+                                    <a href="#" onClick="warning('确实要删除吗','{:url('Cate/del',array('id'=>$vo['id']))}')" 
                                         class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>

@@ -17,6 +17,9 @@
     <link href="__PUBLIC__style/demo.css" rel="stylesheet">
     <link href="__PUBLIC__style/typicons.css" rel="stylesheet">
     <link href="__PUBLIC__style/animate.css" rel="stylesheet">
+       <script type="text/javascript" src="__PUBLIC__ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="__PUBLIC__ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__ueditor/lang/zh-cn/zh-cn.js"></script>
     
 </head>
 <body>
@@ -157,7 +160,15 @@
     <script src="__PUBLIC__style/bootstrap.js"></script>
     <script src="__PUBLIC__style/jquery.js"></script>
     <!--Beyond Scripts-->
-    <script src="__PUBLIC__style/beyond.js"></script>
+       <script src="__PUBLIC__/style/beyond.js"></script>
+    <script type="text/javascript">
+UE.getEditor('content',{initialFrameWidth:880,initialFrameHeight:400,});
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实
+    
+
+
+</script>
     
 
 

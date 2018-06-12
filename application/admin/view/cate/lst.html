@@ -58,7 +58,7 @@ __PUBLIC__<!DOCTYPE html>
                             <tr>
                                 <th class="text-center">栏目名称</th>
                                 <th class="text-center">栏目名称</th>
-                                <th class="text-center">栏目名称</th>
+                                <th class="text-center">是否推荐</th>
                                 <th class="text-center">栏目名称</th>
                                 <th class="text-center">栏目名称</th>
                                 <th class="text-center">栏目名称</th>
@@ -71,11 +71,18 @@ __PUBLIC__<!DOCTYPE html>
                                                         <tr>
                                 <td align="center">{$vo.title}</td>
                                 <td align="center">{$vo.desc}</td>
-                                <td align="center">{$vo.title}</td>
+                                <td align="center">
+                                {if  condition="$vo['state'] eq 1"}
+                                     已推荐
+                                       {else  /}
+                                       未推荐
+                                       {/if}
+                                </td>
                                 <td align="center">{$vo.title}</td>
                                 <td align="center">
                                       {if condition="$vo.pic neq '' "}
-                                    <img src="__IMG__{$vo.pic}" height="50">
+
+                                    <img src="__IMG__{$vo.pic}" height="50"> 
                                 {else /}
                                 暂无图片1
                                 {/if}

@@ -25,7 +25,7 @@
                                     <img src="__PUBLIC__images/adam-jansen.jpg">
                                 </div>
                                 <section>
-                                    <h2><span class="profile"><span>admin</span></span></h2>
+                                    <h2><span class="profile"><span>{$Request.session.username}</span></span></h2>
                                 </section>
                             </a>
                             <!--Login Area Dropdown-->
@@ -37,7 +37,7 @@
                                         </a>
                                 </li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/changePwd.html">
+                                    <a href="{:url('Admin/edit',array('id'=>$Request.session.uid))}">
                                             修改密码
                                         </a>
                                 </li>

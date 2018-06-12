@@ -20,8 +20,23 @@ class Column extends Model{
 		}
 		return $arr;
 		}
-		
+
+	public function delchile(){
+			$column=db('column')->select();
+			return this->_delchile($column,$id);
+
 	}
+	public function _delchile($column,$id){
+			static $arr=array();
+			foreach ($column as $k => $v) {
+				if ($v['pid']==$id) {
+					$arr[]=$v;
+					# code...
+				}
+			}
+				}	
+			}
+		}
 
 
 

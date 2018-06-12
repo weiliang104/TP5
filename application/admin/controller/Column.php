@@ -9,6 +9,13 @@ class Column extends Controller{
 			$this->error('请先登录','Login/login');
 		}
 	}
+	protected $beforeActionList=[
+		'delson' => ['only'=>'del'],
+	];
+	protected delson(){
+		$column=new ColumnModel;
+		$column->delchile();
+	}
 public function lst(){
 	$cate=new ColumnModel();
 	$column=$cate->tree();

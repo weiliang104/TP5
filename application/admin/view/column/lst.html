@@ -56,6 +56,8 @@ __PUBLIC__<!DOCTYPE html>
                     <table class="table table-bordered table-hover">
                         <thead class="">
                             <tr>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">PID</th>
                                 <th class="text-center">栏目名称</th>
                                 <th class="text-center">类型</th>
                                 <th class="text-center">操作</th>
@@ -67,6 +69,8 @@ __PUBLIC__<!DOCTYPE html>
                         <tbody>
                            {volist name="list" id="vo"}
                                                         <tr>
+                                <td align="center">{$vo.id}</td>   
+                                 <td align="center">{$vo.pid}</td>                      
                                 <td align="left"><?php echo str_repeat('-',$vo['lebel']*5)?>{$vo.column}</td>
                                 <td align="center">
                                     {if condition="$vo.type eq 1"}
